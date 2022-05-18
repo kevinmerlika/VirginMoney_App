@@ -41,7 +41,11 @@ class RoomAdapter: RecyclerView.Adapter<RoomAdapter.RoomViewHolder>(){
 
         holder.binding.apply {
             textView4.text = currRoom.id
-            textView5.text = currRoom.isOccupied.toString()
+            if(currRoom.isOccupied.toString() == "true") {
+                textView5.text = "Occupied"
+            }else{
+                textView5.text = "Available"
+            }
             textView6.text = currRoom.maxOccupancy.toString()
         }
     }
