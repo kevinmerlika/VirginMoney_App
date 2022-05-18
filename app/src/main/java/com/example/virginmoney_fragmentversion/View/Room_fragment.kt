@@ -45,12 +45,12 @@ class Room_fragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
             setHasFixedSize(true)
         }
-        populatingrecyclerview()
+        populatingRecyclerView()
 
 
     }
 
-    private fun populatingrecyclerview(){
+    private fun populatingRecyclerView(){
 
 
         viewModel.responseRoom.observe(viewLifecycleOwner) { it ->

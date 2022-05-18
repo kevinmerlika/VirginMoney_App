@@ -45,12 +45,12 @@ class People_fragment : Fragment() {
             layoutManager = LinearLayoutManager(activity)
             setHasFixedSize(true)
         }
-        populatingrecyclerview()
+        populatingRecyclerView()
 
 
     }
 
-    private fun populatingrecyclerview(){
+    private fun populatingRecyclerView(){
 
 
         viewModel.responsePeople.observe(viewLifecycleOwner) { it ->

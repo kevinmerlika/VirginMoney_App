@@ -11,7 +11,7 @@ data class Data(
     @SerializedName("id")
     val id: String,
     @SerializedName("meetingid")
-    val meetingid: String,
+    val meetingId: String,
     @SerializedName("title")
     val title: String,
     @SerializedName("toId")

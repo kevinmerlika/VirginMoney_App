@@ -40,13 +40,13 @@ class RoomAdapter: RecyclerView.Adapter<RoomAdapter.RoomViewHolder>(){
         val currRoom = differ.currentList[position]
 
         holder.binding.apply {
-            textView4.text = currRoom.id
+            id.text = currRoom.id
             if(currRoom.isOccupied.toString() == "true") {
-                textView5.text = "Occupied"
+                Availability.text = "Occupied"
             }else{
-                textView5.text = "Available"
+                Availability.text = "Available"
             }
-            textView6.text = currRoom.maxOccupancy.toString()
+            Occupancy.text = currRoom.maxOccupancy.toString()
         }
     }
     override fun getItemCount() = differ.currentList.size
