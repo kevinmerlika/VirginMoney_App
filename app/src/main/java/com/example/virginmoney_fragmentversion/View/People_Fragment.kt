@@ -14,7 +14,7 @@ import com.example.virginmoney_fragmentversion.databinding.FragmentPeopleFragmen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class People_fragment : Fragment() {
+class People_Fragment : Fragment() {
 
 
     private lateinit var binding: FragmentPeopleFragmentBinding
@@ -59,19 +59,6 @@ class People_fragment : Fragment() {
 
         }
 
-        binding.RecyclerView.apply {
-            adapter = peopleadapter
-            layoutManager = LinearLayoutManager(activity)
-            setHasFixedSize(true)
-
-        }
-
-
-
-        //binding.RecyclerView.apply {
-            //    adapter = peopleadapter
-               // layoutManager = LinearLayoutManager(this.context)
-              //  setHasFixedSize(true)
 
             }
         }

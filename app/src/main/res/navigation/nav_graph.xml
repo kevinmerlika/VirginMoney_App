@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/people_fragment"
-        android:name="com.example.virginmoney_fragmentversion.View.People_fragment"
+        android:name="com.example.virginmoney_fragmentversion.View.People_Fragment"
         android:label="fragment_people_fragment"
         tools:layout="@layout/fragment_people_fragment" />
     <fragment
         android:id="@+id/room_fragment"
-        android:name="com.example.virginmoney_fragmentversion.View.Room_fragment"
+        android:name="com.example.virginmoney_fragmentversion.View.Room_Fragment"
         android:label="fragment_room_fragment"
         tools:layout="@layout/fragment_room_fragment" />
 </navigation>

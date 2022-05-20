@@ -14,13 +14,13 @@ import com.example.virginmoney_fragmentversion.databinding.FragmentRoomFragmentB
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class Room_fragment : Fragment() {
+class Room_Fragment : Fragment() {
 
 
     private lateinit var binding: FragmentRoomFragmentBinding
     private lateinit var recyclerview: RecyclerView
     private val viewModel: PeopleViewModel by viewModels()
-    private lateinit var peopleadapter: RoomAdapter
+    private lateinit var roomadapter: RoomAdapter
 
 
 
@@ -39,9 +39,9 @@ class Room_fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         recyclerview = binding.RoomRecyclerView
-        peopleadapter = RoomAdapter()
+        roomadapter = RoomAdapter()
         recyclerview.apply {
-            adapter = peopleadapter
+            adapter = roomadapter
             layoutManager = LinearLayoutManager(activity)
             setHasFixedSize(true)
         }
@@ -54,24 +54,12 @@ class Room_fragment : Fragment() {
 
 
         viewModel.responseRoom.observe(viewLifecycleOwner) { it ->
-            peopleadapter.submitList(it)
+            roomadapter.submitList(it)
 
 
         }
 
-        binding.RoomRecyclerView.apply {
-            adapter = peopleadapter
-            layoutManager = LinearLayoutManager(activity)
-            setHasFixedSize(true)
 
-        }
-
-
-
-        //binding.RecyclerView.apply {
-        //    adapter = peopleadapter
-        // layoutManager = LinearLayoutManager(this.context)
-        //  setHasFixedSize(true)
 
     }
 }
